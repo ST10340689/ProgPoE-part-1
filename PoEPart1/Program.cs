@@ -47,7 +47,7 @@ class Program
             Console.Write("Quantity: ");
             ingredient.Quantity = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Unit of measurement (tablespoon, teaspoon, cup): "); //Restction of only these keywords needs to be put here
+            Console.Write("Unit of measurement (tablespoon, teaspoon, cup): "); // Restction of only these keywords needs to be put here
             ingredient.Unit = Console.ReadLine();
 
             recipe.Ingredients.Add(ingredient);
@@ -93,11 +93,11 @@ class Program
             Console.WriteLine("Enter the scaling factor (0.5, 2, or 3): ");
             double scale = Convert.ToDouble(Console.ReadLine());
 
-            if (scale == 0.5 || scale == 2 || scale == 3) //Takes number
+            if (scale == 0.5 || scale == 2 || scale == 3) // Takes number
             {
                 foreach (var ingredient in recipe.Ingredients)
                 {
-                    ingredient.Quantity *= scale; //Scales based on input number ONLY for those 3 options
+                    ingredient.Quantity *= scale; // Scales based on input number ONLY for those 3 options
                 }
 
                 Console.WriteLine($"Recipe scaled by a factor of {scale} successfully!");
