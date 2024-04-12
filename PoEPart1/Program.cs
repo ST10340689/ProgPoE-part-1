@@ -25,8 +25,8 @@ class Ingredient
 class Program
 {
     static Recipe recipe = new Recipe();
-    static Dictionary<string, double> originalQuantities = new Dictionary<string, double>(); //Stores the original quantities 
-    static void AddRecipe() //Add recipe function
+    static Dictionary<string, double> originalQuantities = new Dictionary<string, double>(); // Stores the original quantities 
+    static void AddRecipe() // Adds recipe function
     {
         Console.WriteLine("Enter details for the recipe:");
 
@@ -52,7 +52,7 @@ class Program
 
             recipe.Ingredients.Add(ingredient);
 
-            // Store original quantity
+            // Stores original quantity
             originalQuantities[ingredient.Name] = ingredient.Quantity;
         }
 
@@ -70,7 +70,7 @@ class Program
         Console.WriteLine("Recipe added successfully!");
     }
 
-    static void DisplayRecipe()
+    static void DisplayRecipe() // Displays recipe to user
     {
         Console.WriteLine("\nRecipe Details:");
 
@@ -104,7 +104,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("Invalid scaling factor. Please enter 0.5, 2, or 3.");
+                Console.WriteLine("Invalid scaling factor. Please enter 0.5, 2, or 3."); // User did not enter either of the 3 options
             }
         }
     }
@@ -123,12 +123,12 @@ class Program
     static void ClearRecipe()
     {
         recipe = new Recipe();
-        Console.WriteLine("Recipe data cleared successfully!");
+        Console.WriteLine("Recipe data cleared successfully!"); // Removes the recipe
     }
 
-    static void Main()
+    static void Main() 
     {
-        int choice;
+        int choice; // Prompts the user to enter a number to pick options
         do
         {
             Console.WriteLine("\nChoose an option:");
